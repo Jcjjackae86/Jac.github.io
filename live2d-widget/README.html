@@ -122,6 +122,7 @@
 
   
   <script language="javascript" type="text/javascript" src="https://cdn.staticfile.org/jquery/1.7.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
   <script type = "text/javascript" >
   var mouseSum = 0;
   jQuery(document).ready(function($) {
@@ -152,10 +153,8 @@
     });
 }); 
    </script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
-    <script src="/live2d-widget/autoload.js"></script>
- 
- 
+    
+
  
  
   
@@ -170,8 +169,9 @@
   
 </head>
 
-<body>
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <script src="https://github.com/Jcjjackae86/Jac.github.io/tree/master/live2d-widget/autoload.js"></script>
+  
   
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
@@ -608,5 +608,5 @@
   
   <script type="text/javascript"> var mouseSum = 0; jQuery(document).ready(function($) { $("body").click(function(e) { var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善"); var $i = $("<span/>").text(a[mouseSum]); mouseSum = (mouseSum + 1) % a.length; var x = e.pageX, y = e.pageY; $i.css({ "z-index": 9999999, "top": y - 20, "left": x, "position": "absolute", "font-weight": "bold", "color": "#6651ff" }); $("body").append($i); $i.animate({ "top": y - 180, "opacity": 0 }, 1500, function() { $i.remove(); }); }); }); < /script>
 
-<script src="/Jac.github.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+<script src="/Jac.github.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
