@@ -362,6 +362,9 @@ td {
 html,
 body {
   height: 100%;
+  background: url("https://jcjjackae86.github.io/Jac.github.io/images/mypic3.jpg");
+  background-size: 100% 100%;
+  background-attachment: fixed;
 }
 .container {
   position: relative;
@@ -1677,7 +1680,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ee57ff;
+  background: #b4914a;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1990,6 +1993,14 @@ pre .javascript .function {
   50%, 70% {
     transform: scale(1.1);
   }
+}
+.gt-header a,
+.gt-comments a,
+.gt-popup a {
+  border-bottom: none;
+}
+.gt-container .gt-popup .gt-action.is--active::before {
+  top: 0.7em;
 }
 .search-pop-overlay {
   background-color: rgba(0,0,0,0.3);
@@ -2348,11 +2359,11 @@ ul.breadcrumb li+li:last-child {
   padding: 0;
   position: absolute;
   top: 0;
-  width: 240px;
+  width: 380px;
 }
 @media (min-width: 1200px) {
   .container .header-inner {
-    width: 240px;
+    width: 380px;
   }
 }
 @media (max-width: 991px) {
@@ -2383,7 +2394,7 @@ ul.breadcrumb li+li:last-child {
   float: right;
   min-height: 700px;
   padding: 40px;
-  width: calc(100% - 252px);
+  width: calc(100% - 392px);
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .content-wrap {
@@ -2406,7 +2417,7 @@ ul.breadcrumb li+li:last-child {
   float: left;
   margin-left: -100%;
   position: static;
-  width: 240px;
+  width: 380px;
 }
 @media (max-width: 991px) {
   .sidebar {
@@ -2609,7 +2620,7 @@ ul.breadcrumb li+li:last-child {
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
   box-sizing: border-box;
   color: #555;
-  width: 240px;
+  width: 380px;
   opacity: 0;
 }
 .sidebar-inner.affix {

@@ -37,7 +37,7 @@
     scheme: 'Gemini',
     version: '7.3.0',
     exturl: false,
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    sidebar: {"position":"left","width":380,"display":"post","offset":12,"onmobile":false},
     back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
     save_scroll: false,
     copycode: {"enable":false,"show_result":false,"style":null},
@@ -789,6 +789,9 @@ $(function() {
 
           </div>
           
+    
+    <div class="comments" id="gitalk-container"></div>
+  
 
         </div>
           
@@ -880,6 +883,11 @@ $(function() {
 
         </div>
       </div>
+	  
+       <div id="music163player">
+			<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="//music.163.com/outchain/player?type=0&id=2897234080&auto=0&height=90"></iframe>
+		    </iframe>
+       </div>
       <!--noindex-->
         <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
@@ -908,6 +916,8 @@ $(function() {
     </div>
   </aside>
   <div id="sidebar-dimmer"></div>
+ 
+  
 
 
       </div>
@@ -1048,6 +1058,25 @@ setInterval("createtime()",250);
     <script src="/Jac.github.io/js/scrollspy.js?v=7.3.0"></script><script src="/Jac.github.io/js/post-details.js?v=7.3.0"></script>
 
   
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID: 'fb5081db23b12fd5d5c6',
+      clientSecret: '7cebe89ebe8138c8c8de378ba49d6e242891763e',
+      repo: 'gitment-comments',
+      owner: 'Jcjjackae86',
+      admin: ['Jcjjackae86'],
+      id: '21dd62414e65b12f0d9e2b4918839268',
+        language: window.navigator.language || window.navigator.userLanguage,
+      
+      distractionFreeMode: 'true'
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+</script>
 
   
 
