@@ -1677,7 +1677,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #e0ff5b;
+  background: #ee57ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2726,11 +2726,8 @@ ul.breadcrumb li+li:last-child {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.footer > div > div {
-  color: #f00;
-}
 .content-wrap {
-  background: url("images/mypic3.jpg");
+  background: initial;
   border-radius: initial;
   box-shadow: initial;
   padding: initial;
