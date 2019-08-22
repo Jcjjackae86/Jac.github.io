@@ -197,7 +197,25 @@ daovoice('update');
     background-attachment:fixed;
 	background-repeat:no-repeat
 	background-size:cover;
+	-webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+	
+	
+	
 }
+    .header-inner {
+    background: #ffffffe8;//设置侧边栏透明
+    opacity: 1;//这里设置为1，否则搜索栏会消失
+}
+    .main-inner {
+        background: #fff;
+        opacity: 0.9;//设置文章主体透明度
+}
+    .footer > div > div {
+        color:#FFFFFF;//底部文字颜色
+    }
 </style>
 
 <style>
@@ -209,6 +227,10 @@ daovoice('update');
    -moz-box-shadow: 0 0 5px rgba(202, 203, 204, .5);
   }
 </style>
+
+
+
+
 
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -839,11 +861,9 @@ $(function() {
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <font color="white">
-
-<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
-	<i class="fa fa-star" style="color: white;"></i>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">JCJ & HLXH</span>
     <span class="post-meta-divider">|</span>
@@ -857,8 +877,25 @@ $(function() {
     </span>
     <span title="站点阅读时长">1 分钟</span>
 </div>
-
-</font>
+<div>
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("08/22/2019 00:00:00");
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+</div>
         
 <div class="busuanzi-count">
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
