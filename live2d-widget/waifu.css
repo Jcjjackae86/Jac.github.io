@@ -38,8 +38,8 @@
 	border-radius: 12px;
 	background-color: rgba(236, 217, 188, 0.5);
 	box-shadow: 0 3px 15px 2px rgba(191, 158, 118, 0.2);
-	font-size: 15px;
-	color: #ffffff;
+	font-size: 25px;
+	color: #fff;
 	line-height: 24px;
 	word-break: break-all;
 	text-overflow: ellipsis;
@@ -80,7 +80,7 @@
 	transition: color .3s;
 }
 #waifu-tool span:hover {
-	color: #0684bd;/* #34495e */
+	color: #ffffff;/* #34495e */
 }
 @keyframes shake {
 	2% {
