@@ -362,7 +362,7 @@ td {
 html,
 body {
   height: 100%;
-  background: url("https://jcjjackae86.github.io/Jac.github.io/images/mypic3.jpg");
+  background: url("https://source.unsplash.com/random/1600x900");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -370,6 +370,7 @@ body {
   -o-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
+  z-index: -2;
 }
 .container {
   position: relative;
@@ -419,6 +420,73 @@ body {
 @media (min-width: 1600px) {
   .container .footer-inner {
     width: 73%;
+  }
+}
+.site-title:hover,
+.post-title:hover {
+  animation: shake-it 0.5s reverse infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.post {
+  margin-top: 0px;
+  margin-bottom: 60px;
+  padding: 25px;
+  -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
+  -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
+}
+@-moz-keyframes shake-it {
+  0% {
+    text-shadow: 0 0 rgba(0,255,255,0.5), 0 0 rgba(255,0,0,0.5);
+  }
+  25% {
+    text-shadow: -2px 0 rgba(0,255,255,0.5), 2px 0 rgba(255,0,0,0.5);
+  }
+  50% {
+    text-shadow: -5px 0 rgba(0,255,255,0.5), 3px 0 rgba(255,0,0,0.5);
+  }
+  100% {
+    text-shadow: 3px 0 rgba(0,255,255,0.5), 5px 0 rgba(255,0,0,0.5);
+  }
+}
+@-webkit-keyframes shake-it {
+  0% {
+    text-shadow: 0 0 rgba(0,255,255,0.5), 0 0 rgba(255,0,0,0.5);
+  }
+  25% {
+    text-shadow: -2px 0 rgba(0,255,255,0.5), 2px 0 rgba(255,0,0,0.5);
+  }
+  50% {
+    text-shadow: -5px 0 rgba(0,255,255,0.5), 3px 0 rgba(255,0,0,0.5);
+  }
+  100% {
+    text-shadow: 3px 0 rgba(0,255,255,0.5), 5px 0 rgba(255,0,0,0.5);
+  }
+}
+@-o-keyframes shake-it {
+  0% {
+    text-shadow: 0 0 rgba(0,255,255,0.5), 0 0 rgba(255,0,0,0.5);
+  }
+  25% {
+    text-shadow: -2px 0 rgba(0,255,255,0.5), 2px 0 rgba(255,0,0,0.5);
+  }
+  50% {
+    text-shadow: -5px 0 rgba(0,255,255,0.5), 3px 0 rgba(255,0,0,0.5);
+  }
+  100% {
+    text-shadow: 3px 0 rgba(0,255,255,0.5), 5px 0 rgba(255,0,0,0.5);
+  }
+}
+@keyframes shake-it {
+  0% {
+    text-shadow: 0 0 rgba(0,255,255,0.5), 0 0 rgba(255,0,0,0.5);
+  }
+  25% {
+    text-shadow: -2px 0 rgba(0,255,255,0.5), 2px 0 rgba(255,0,0,0.5);
+  }
+  50% {
+    text-shadow: -5px 0 rgba(0,255,255,0.5), 3px 0 rgba(255,0,0,0.5);
+  }
+  100% {
+    text-shadow: 3px 0 rgba(0,255,255,0.5), 5px 0 rgba(255,0,0,0.5);
   }
 }
 pre,
@@ -1685,7 +1753,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #4e9fe5;
+  background: #a3fcff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
