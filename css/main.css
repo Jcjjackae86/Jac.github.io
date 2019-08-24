@@ -363,8 +363,13 @@ html,
 body {
   height: 100%;
   background: url("https://jcjjackae86.github.io/Jac.github.io/images/mypic3.jpg");
-  background-size: 100% 100%;
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
 }
 .container {
   position: relative;
@@ -1680,7 +1685,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff9dff;
+  background: #0634f5;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
