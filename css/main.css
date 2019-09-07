@@ -567,9 +567,12 @@ pre code {
   text-align: right;
 }
 .highlight .code pre {
-  background-color: #000;
   padding-left: 10px;
-  width: 100%;
+  padding-right: 10px;
+  background-color: #000;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 .gutter {
   user-select: none;
@@ -1753,7 +1756,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #775736;
+  background: #ff17f7;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
