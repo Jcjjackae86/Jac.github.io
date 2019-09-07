@@ -466,10 +466,10 @@ daovoice('update');
 </li>
 </ul>
 <p>这样，整个项目就可以通过你的服务器IP或者域名从公网访问了。你可以试试能否正常地通过浏览器打开<code>autoload.js</code>和<code>live2d.min.js</code>等文件。<strong>（最好还要确定一下这些文件的内容是正确的，有时由于字符集的问题，文件中可能出现乱码；此时需要重新下载）</strong><br>如果没有问题，接下来需要修改一些配置。（需要通过服务器上的<code>vim</code>，<code>emacs</code>，cPanel文件管理器等工具修改；你也可以先在本地完成这一步骤，再上传到服务器上）<br>修改<code>autoload.js</code>中的参数<code>live2d_path</code>为<code>live2d-widget</code>这一文件夹在公网上的路径。比如说，如果你可以通过</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.example.com/path/to/live2d-widget/live2d.min.js</span><br></pre></td></tr></table></figure>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http<span class="variable">s:</span>//www.example.<span class="keyword">com</span>/path/<span class="keyword">to</span>/live2d-widget/live2d.<span class="built_in">min</span>.js</span><br></pre></td></tr></table></figure>
 
 <p>访问到<code>live2d.min.js</code>，那么就把<code>live2d_path</code>的值修改为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.example.com/path/to/live2d-widget/</span><br></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="regexp">//</span>www.example.com<span class="regexp">/path/</span>to<span class="regexp">/live2d-widget/</span></span><br></pre></td></tr></table></figure>
 
 <p>路径末尾的<code>/</code>一定要加上。具体可以参考<code>autoload.js</code>内的注释。<br>完成后，在你要添加看板娘的界面加入</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://www.example.com/path/to/live2d-widget/autoload.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -671,7 +671,7 @@ daovoice('update');
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">8k</span>
+    <span title="站点总字数">7k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
